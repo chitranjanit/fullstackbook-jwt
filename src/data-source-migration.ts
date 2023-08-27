@@ -4,12 +4,12 @@ import 'dotenv/config';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host: 'localhost',
-  port: 5432,
-  username: 'postgres',
-  password: '',
-  database: 'fullstackbook-nestjs-jwt',
+  host: process.env.DATABASE_HOST,
+  port: +process.env.DATABASE_PORT,
+  username: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
+  synchronize: false,
+  logging: false,
   migrations: ['./src/migration/*.ts'],
-  synchronize: true,
   subscribers: [],
 });

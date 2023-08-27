@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export class CreateRolesTable1693053107182 implements MigrationInterface {
+export class CreateRolesTable1693107714343 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     queryRunner.query(`
         create table roles (
